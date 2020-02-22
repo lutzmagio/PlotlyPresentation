@@ -1,0 +1,33 @@
+---
+title: "Diamanod Dataset Visualization with Plotly"
+author: "Henry Voelker"
+date: "22 Februar 2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+This presentation gives an example for code and output of a plotly
+interactive scatter plot. The diamond dataset from R is used.
+
+## Load data
+
+```{r loadPackage, echo=TRUE, eval=FALSE}
+library(UsingR)
+library(plotly)
+data(diamond)
+plot_ly(diamond, x = ~carat, y = ~price, type = "scatter")
+```
+
+## Plot
+Diamond price over mass (carat)
+```{r, echo=FALSE, message=FALSE}
+library(UsingR)
+library(plotly)
+data(diamond)
+plot_ly(diamond, x = ~carat, y = ~price, type = "scatter")
+```
+
